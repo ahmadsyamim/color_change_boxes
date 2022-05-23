@@ -1,0 +1,86 @@
+.wrapper div {
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid gray;
+  margin: 5px;
+}
+.box1 {
+    grid-area: box1;
+}
+.box2 {
+    grid-area: box2;
+}
+.box3 {
+    grid-area: box3;
+}
+.box4 {
+    grid-area: box4;
+}
+.box5 {
+    grid-area: box5;
+}
+.box6 {
+    grid-area: box6;
+}
+.box7 {
+    grid-area: box7;
+}
+.box8 {
+    grid-area: box8;
+}
+.box9 {
+    grid-area: box9;
+}
+
+.header {
+    grid-area: hd;
+}
+.footer {
+    grid-area: ft;
+}
+.content {
+    grid-area: main;
+}
+.sidebar {
+    grid-area: sd;
+}
+
+.wrapper {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "box1 box1"
+          "box3 box4"
+          "box2 box2"
+          "box7 box7"
+          "box5 box8"
+          "box6 box9";
+    
+}
+
+/* @media (min-width: 700px) {
+    .wrapper {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas:
+          "hd hd hd hd   hd   hd   hd   hd   hd"
+          "sd sd sd main main main main main main"
+          "sd sd sd  ft  ft   ft   ft   ft   ft";
+    }
+} */
+@media (min-width: 600px) {
+    .wrapper {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-areas:
+      "box1 box1 box1 box2 box2 box2 box2"
+      "box1 box1 box1 box2 box2 box2 box2"
+      "box1 box1 box1 box3 box3 box4 box4"
+      "box1 box1 box1 box3 box3 box4 box4" 
+      "box5 box5 box7 box7 box7 box8 box8"          
+      "box6 box6 box7 box7 box7 box8 box8"
+      "box6 box6 box7 box7 box7 box9 box9"
+;
+    }
+}
